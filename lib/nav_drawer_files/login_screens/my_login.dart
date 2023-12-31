@@ -2,9 +2,12 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:food_recipes_app/main_pages/homescreen.dart';
 import 'package:food_recipes_app/nav_drawer_files/login_screens/login_with_otp.dart';
+import 'package:food_recipes_app/splash_screen.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rive/rive.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'homepage.dart';
 
@@ -88,7 +91,7 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
                     'Welcome to ',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 32,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -97,7 +100,7 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
                       TypewriterAnimatedText('Food Factory ',
                           textStyle: TextStyle(
                             color: Colors.red.shade800,
-                            fontSize: 30,
+                            fontSize: 28,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'MulishBold',
                           ),
@@ -274,6 +277,8 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
                                           password:
                                               no2Cntroller.text.toString());
                                   showDoneDialog(context);
+                                  var pref = await SharedPreferences.getInstance();
+                                  pref.setBool(SplashScreen.KEY_IS_LOGGED_IN, true);
                                   setState(() {
                                     mController.duration = Duration(seconds: 4);
                                     mController
@@ -281,9 +286,11 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
                                         .whenComplete(() => Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) => HomePage(
+                                                builder: (context) => HomeScreen(
                                                       id: cred.user!.uid,
                                                     ))));
+
+
                                     print('User: ${cred.user!.uid}');
                                     no1Cntroller.clear();
                                     no2Cntroller.clear();

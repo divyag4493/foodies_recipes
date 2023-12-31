@@ -9,9 +9,9 @@ import 'package:food_recipes_app/nav_drawer_files/login_screens/homepage.dart';
 import 'package:food_recipes_app/nav_drawer_files/login_screens/login_with_otp.dart';
 import 'package:food_recipes_app/nav_drawer_files/login_screens/my_login.dart';
 import 'package:food_recipes_app/nav_drawer_files/login_screens/signup_screen.dart';
+import 'package:food_recipes_app/splash_screen.dart';
 import 'package:food_recipes_app/utility/constant.dart';
 import 'package:food_recipes_app/main_pages/homescreen.dart';
-
 import 'package:food_recipes_app/firebase_options.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           primaryColor: kPrimaryColor,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           fontFamily: 'Mulish'),
-      initialRoute: 'mainScreen',
+      initialRoute: 'splashScreen',
       routes: {
         'mainScreen': (context) => HomeScreen(),
         'signup': (context) => MySignUp(),
@@ -50,6 +50,7 @@ class MyApp extends StatelessWidget {
         'addnewitem': (context) => AddNewItem(),
         'allRecipes': (context) => AllRecipeHere(),
         'imageGallary': (context) => ImagePage(),
+        'splashScreen': (context) => SplashScreen(),
       },
     );
   }

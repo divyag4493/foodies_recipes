@@ -10,7 +10,9 @@ import '../main_pages/detail_recipe_page.dart';
 class HomeScreen extends StatefulWidget {
   static late bool tag = false;
 
-  const HomeScreen({Key? key}) : super(key: key);
+  String? id;
+
+  HomeScreen({this.id});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

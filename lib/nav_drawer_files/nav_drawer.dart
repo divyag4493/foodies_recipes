@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipes_app/nav_drawer_files/welcome_page.dart';
+import 'package:food_recipes_app/splash_screen.dart';
 import 'package:food_recipes_app/utility/constant.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class NavDrawer extends StatefulWidget {
   const NavDrawer({Key? key}) : super(key: key);
@@ -90,9 +92,15 @@ class _NavDrawerState extends State<NavDrawer> {
               colorFilter:
                   ColorFilter.mode(Colors.grey.shade900, BlendMode.srcIn),
             ),
-            title: Text(
-              'Logout',
-              style: TextStyle(fontFamily: 'MulishBold'),
+            title: InkWell(onTap: () async{
+              var pref = await SharedPreferences.getInstance();
+              pref.setBool(SplashScreen.KEY_IS_LOGGED_IN, false);
+              Navigator.pushNamed(context, 'login');
+            },
+              child: Text(
+                'Logout',
+                style: TextStyle(fontFamily: 'MulishBold'),
+              ),
             ),
             onTap: () => {Navigator.of(context).pop()},
           ),
