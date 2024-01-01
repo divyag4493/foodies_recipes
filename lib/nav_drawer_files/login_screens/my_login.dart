@@ -22,8 +22,9 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
   var no1Cntroller = TextEditingController();
   var no2Cntroller = TextEditingController();
   bool isVisible = false;
-  late AnimationController mController;
+  bool isChecked = false;
 
+  late AnimationController mController;
   var riveLoginPath = 'assets/rive/bear_login.riv';
   StateMachineController? machineController;
   Artboard? mainArtboard;
@@ -36,6 +37,7 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
   void initState() {
     // TODO: implement initState
     super.initState();
+
     //isVisible = true;
     mController = AnimationController(
       vsync: this,
@@ -67,6 +69,7 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
     });
   }
 
+
   @override
   void dispose() {
     mController.dispose();
@@ -75,6 +78,18 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    Color getColor(Set<MaterialState> states) {
+      const Set<MaterialState> interactiveStates = <MaterialState>{
+        MaterialState.pressed,
+        MaterialState.hovered,
+        MaterialState.focused,
+      };
+      if (states.any(interactiveStates.contains)) {
+        return Colors.yellow;
+      }
+      return Colors.orange.shade700;
+    }
+
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -225,6 +240,36 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
                           ),
                           hintStyle: TextStyle(color: Colors.orange.shade700)),
                     ),
+
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                           Checkbox(
+                             side: BorderSide(color: Colors.orange.shade900),
+                    checkColor: Colors.white,
+                      fillColor: MaterialStateProperty.resolveWith(getColor),
+                      value: isChecked,
+                      onChanged: (bool? value) {
+
+                        setState(() {
+                          isChecked = value!;
+                        });
+                      },
+
+                          ),
+
+                          Text("Remember Me",
+                              style: TextStyle(
+                                color: Colors.orange.shade800,
+                                fontSize: 16,
+                              ))
+                        ]),
+
+
+
+
+
+
                     SizedBox(
                       height: 20,
                     ),
