@@ -1,7 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+/*import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';*/
+import 'package:food_recipes_app/index.dart';
 
 class ForgorPassword extends StatefulWidget {
   const ForgorPassword({Key? key}) : super(key: key);

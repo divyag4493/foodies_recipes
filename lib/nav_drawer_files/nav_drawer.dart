@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipes_app/nav_drawer_files/welcome_page.dart';
 import 'package:food_recipes_app/splash_screen.dart';
 import 'package:food_recipes_app/utility/constant.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shared_preferences/shared_preferences.dart';*/
+import 'package:food_recipes_app/index.dart';
 
 class NavDrawer extends StatefulWidget {
   const NavDrawer({Key? key}) : super(key: key);

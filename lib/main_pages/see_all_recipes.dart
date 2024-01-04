@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_recipes_app/main_pages/homescreen.dart';
 import 'package:food_recipes_app/utility/constant.dart';
 import 'package:food_recipes_app/utility/all_list.dart';
-import 'package:food_recipes_app/main_pages/detail_recipe_page.dart';
+import 'package:food_recipes_app/main_pages/detail_recipe_page.dart';*/
+import 'package:food_recipes_app/index.dart';
 
 
 class SeeAllRecipes extends StatefulWidget {

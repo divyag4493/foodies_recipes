@@ -1,8 +1,11 @@
-import 'dart:async';
+/*import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:food_recipes_app/main_pages/homescreen.dart';
+import 'package:food_recipes_app/nav_drawer_files/login_screens/my_login.dart';
 
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shared_preferences/shared_preferences.dart';*/
+import 'index.dart';
 
 class SplashScreen extends StatefulWidget {
   static String KEY_IS_LOGGED_IN = 'isLogin';
@@ -22,9 +25,11 @@ class _SplashScreenState extends State<SplashScreen> {
       SharedPreferences pref = await SharedPreferences.getInstance();
       var check = pref.getBool(SplashScreen.KEY_IS_LOGGED_IN) ?? false;
       if(check){
-        Navigator.pushNamed(context, 'mainScreen');
+       // Navigator.pushNamed(context, 'mainScreen');
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
       } else{
-        Navigator.pushNamed(context, 'login');
+       // Navigator.pushNamed(context, 'login');
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyLogin()));
       }
 print(check);
       setState(() {

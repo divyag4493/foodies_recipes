@@ -1,10 +1,11 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
+/*import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_recipes_app/models/add_new_item_model.dart';
 import 'package:food_recipes_app/models/user_model.dart';
-import 'package:food_recipes_app/nav_drawer_files/all_recipe_here.dart';
+import 'package:food_recipes_app/nav_drawer_files/all_recipe_here.dart';*/
+import 'package:food_recipes_app/index.dart';
 
 class AddNewItem extends StatefulWidget {
   const AddNewItem({super.key});

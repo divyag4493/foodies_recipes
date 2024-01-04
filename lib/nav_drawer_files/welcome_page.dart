@@ -1,8 +1,10 @@
-import 'dart:ui';
+/*import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:food_recipes_app/nav_drawer_files/login_screens/my_login.dart';
-import 'package:food_recipes_app/nav_drawer_files/login_screens/signup_screen.dart';
+import 'package:food_recipes_app/nav_drawer_files/login_screens/signup_screen.dart';*/
+import 'dart:ui';
+import 'package:food_recipes_app/index.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);

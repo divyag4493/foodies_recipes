@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipes_app/main_pages/see_all_fresh_recipes.dart';
 import 'package:food_recipes_app/main_pages/see_all_recipes.dart';
 import 'package:food_recipes_app/utility/constant.dart';
 import 'package:food_recipes_app/nav_drawer_files/nav_drawer.dart';
 import '../utility/all_list.dart';
-import '../main_pages/detail_recipe_page.dart';
+import '../main_pages/detail_recipe_page.dart';*/
+import 'package:food_recipes_app/index.dart';
 
 class HomeScreen extends StatefulWidget {
   static late bool tag = false;

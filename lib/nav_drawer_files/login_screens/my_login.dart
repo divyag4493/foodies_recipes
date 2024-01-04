@@ -1,15 +1,5 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:food_recipes_app/main_pages/homescreen.dart';
-import 'package:food_recipes_app/nav_drawer_files/login_screens/login_with_otp.dart';
-import 'package:food_recipes_app/splash_screen.dart';
-import 'package:lottie/lottie.dart';
+import 'package:food_recipes_app/index.dart';
 import 'package:rive/rive.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import 'homepage.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -160,6 +150,7 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
                             ],
                           ),
                     TextField(
+
                       controller: no1Cntroller,
                       onChanged: (textValue) {
                         isChecking!.value = true;
@@ -328,7 +319,7 @@ class _MyLoginState extends State<MyLogin> with SingleTickerProviderStateMixin {
                                     mController.duration = Duration(seconds: 4);
                                     mController
                                         .forward()
-                                        .whenComplete(() => Navigator.push(
+                                        .whenComplete(() => Navigator.pushReplacement(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) => HomeScreen(

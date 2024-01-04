@@ -1,10 +1,10 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
+/*import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_recipes_app/nav_drawer_files/login_screens/homepage.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
-
+import 'package:intl_phone_field/intl_phone_field.dart';*/
+import 'package:food_recipes_app/index.dart';
 import 'package:food_recipes_app/nav_drawer_files/login_screens/login_with_otp.dart';
 
 class LoginWithOTP extends StatefulWidget {

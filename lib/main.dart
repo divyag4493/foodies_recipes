@@ -1,4 +1,4 @@
-import 'package:firebase_core/firebase_core.dart';
+/*import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_recipes_app/nav_drawer_files/add_items.dart';
@@ -12,11 +12,8 @@ import 'package:food_recipes_app/nav_drawer_files/login_screens/signup_screen.da
 import 'package:food_recipes_app/splash_screen.dart';
 import 'package:food_recipes_app/utility/constant.dart';
 import 'package:food_recipes_app/main_pages/homescreen.dart';
-import 'package:food_recipes_app/firebase_options.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-
-import 'main_pages/see_all_recipes.dart';
-import 'main_pages/see_all_fresh_recipes.dart';
+import 'package:food_recipes_app/firebase_options.dart';*/
+import 'package:food_recipes_app/index.dart';
 
 void main() async {
   SystemChrome.setSystemUIOverlayStyle(

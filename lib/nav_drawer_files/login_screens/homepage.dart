@@ -1,4 +1,4 @@
-import 'dart:io';
+/*import 'dart:io';
 import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -8,7 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:food_recipes_app/nav_drawer_files/login_screens/my_login.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:food_recipes_app/models/note_model.dart';
+import 'package:food_recipes_app/models/note_model.dart';*/
+import 'package:food_recipes_app/index.dart';
 
 class HomePage extends StatefulWidget {
   String? id;

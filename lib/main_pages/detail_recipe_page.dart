@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_recipes_app/utility/constant.dart';
 import 'package:readmore/readmore.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';*/
+import 'package:food_recipes_app/index.dart';
 
 class DetailRecipePage extends StatefulWidget {
   final int index;
